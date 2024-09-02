@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url(bag.jpg);
+        background-position: center;
+        background-size: cover;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    .navbar {
+        height: 7vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(1, 12, 19);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .profile img {
+        height: 40px;
+        width: 40px;
+        padding-right: 6px;
+        border-radius: 50%;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    i {
+        font-size: 2.5rem;
+    }
+
+    .option {
+        display: flex;
+        gap: 25px;
+    }
+
+    .profile p {
+        font-size: 1.7rem;
+    }
+
+    .chat-container {
+        margin-top: 60px; /* Space for fixed navbar */
+        height: calc(100vh - 110px); /* Full viewport height minus navbar and chat input height */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chats {
+        font-size: 50px;
+        padding: 10px;
+        margin-bottom: 60px; /* Space for fixed chat input */
+        background-color: transparent; /* Light gray background for the chat area */
+        overflow-y: auto; /* Scroll if content overflows */
+        height: 100%; /* Fill remaining height */
+        display: flex;
+        flex-direction: column; /* Stack chat bubbles vertically */
+        align-items: flex-start; /* Align chat bubbles to the left */
+    }
+
+    .chat {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: calc(100% - 10px);
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .type {
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 25px;
+        background-color: #172930;
+        color: #93acb6;
+    }
+
+    .send {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgb(9, 224, 99);
+        color: black;
+        padding-left: 3px;
+        margin-left: 5px;
+    }
+
+    input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        width: 150px;
+        font-size: 20px;
+        caret-color: green;
+        cursor: pointer;
+        color: white;
+    }
+
+    .type i {
+        font-size: 22px;
+    }
+
+    .chat-bubble {
+        max-width: 80%;
+        padding: 10px 16px;
+        padding-right: 20px;
+        margin: 5px 0;
+        border-radius: 16px;
+        color: white;
+        word-wrap: break-word;
+        background-color: #007bff; /* Blue background for chat bubbles */
+        display: inline-block;
+        font-size: 17px;
+
+    }
+
+    .chat-bubble.user {
+        background-color: #165530; /* Different color for user messages (optional) */
+        margin-left: auto; /* Align user messages to the right */
+    }
+}
